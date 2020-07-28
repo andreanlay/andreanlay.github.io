@@ -15,7 +15,7 @@
 
 ![](https://github.com/andreanlay/handwritten-character-recognition-deep-learning/blob/master/demo.gif)  
 
-# [Project 3: Mailfy - Local Email App Using Visual Basic .NET](https://github.com/andreanlay/mailfy-email-app)
+# [Project 3: Mailfy - Email Application](https://github.com/andreanlay/mailfy-email-app)
 * Created entirely using VB .NET Winform with no additional library used
 
 ![](https://github.com/andreanlay/mailfy-email-app/blob/master/screenshot.PNG)
@@ -31,3 +31,14 @@
 * Using Spark Framework 2.9.1
 
 ![](https://github.com/andreanlay/cashier-inventory-web-spark-java/blob/master/screenshots/dashboard.PNG)
+
+# [Project 5: Space Shooter Game](https://github.com/andreanlay/space-shooter-sdl2)
+* Made using C++ with SDL2 library
+
+![](https://github.com/andreanlay/space-shooter-sdl2/blob/master/demo.gif)
+
+# [Project 6: Sudoku Game](https://github.com/andreanlay/simple-sudoku-pygame)
+* Made using Python and Pygame
+* Backtracking algorithm was used to check board answer
+
+![](https://github.com/andreanlay/simple-sudoku-pygame/blob/app/screenshot.png)
