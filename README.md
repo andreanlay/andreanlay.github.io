@@ -1,4 +1,4 @@
-# Portfolio
+Hello! My name is Andrean, a second-year Computer Science student. Here I share some of projects I created. It consists of my personal project and few college class final project.
 
 # [Project 1: Deep Reinforcement Learning Tetris AI](https://github.com/andreanlay/tetris-ai-deep-reinforcement-learning)
 * An AI learned to play Tetris using Value Function based Deep Reinforcement Learning
