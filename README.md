@@ -4,7 +4,8 @@ Hello! My name is Andrean, a second-year Computer Science student. Here I share 
 
 # [Project 1: Flutter To Do App](https://github.com/andreanlay/todo-flutter)
 * To Do App created using Flutter
-* Fully connected with Google Firebase as backend
+* Connected with Google Firebase as backend database
+* Fully responsive
 
 ![](https://github.com/andreanlay/andreanlay.github.io/blob/master/img/demo.gif)
 
