@@ -7,7 +7,7 @@ Hello! My name is Andrean, a second-year Computer Science student. Here I share 
 * Connected with Google Firebase as backend database
 * Fully responsive
 
-![](https://github.com/andreanlay/andreanlay.github.io/blob/master/img/demo.gif)
+![](img/demo.gif)
 
 # [Project 2: Deep Reinforcement Learning Tetris AI](https://github.com/andreanlay/tetris-ai-deep-reinforcement-learning)
 * An AI learned to play Tetris using Value Function based Deep Reinforcement Learning
