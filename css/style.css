@@ -1,0 +1,40 @@
+body, html {
+    height: 100%;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+}
+
+.separator {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+}
+
+.profile-photo {
+    width: 210px;
+    height: 200px;
+    border-radius: 1000px;
+}
+
+a, a:hover {
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.portfolio-section {
+    height: 500px;
+    background: linear-gradient(lightblue, lightskyblue);
+}
+
+ol li {
+    line-height: 30px !important;
+}
+
+.display-5 {
+    font-size: 1.0rem;
+    font-weight: 500;
+}
