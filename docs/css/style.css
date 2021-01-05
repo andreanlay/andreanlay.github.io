@@ -7,6 +7,24 @@ h1 {
     color: white;
 }
 
+.project-card {
+    margin: 10px 50px 50px 50px;
+    max-width: 28rem; 
+    min-height: 15rem;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    opacity: 0.75;
+}
+
+.more-project-body {
+    position: absolute;
+    left: 38%;
+    top: 45%;
+}
+
 .separator {
     height: 2px;
     width: 100%;
@@ -25,13 +43,14 @@ a, a:hover {
     text-decoration: none;
 }
 
-.portfolio-section {
-    height: 500px;
-    background: linear-gradient(lightblue, lightskyblue);
+.tech-logo {
+    margin-left: 15px;
+    width: 25px;
+    height: 25px
 }
 
-ol li {
-    line-height: 30px !important;
+.more-project-text:hover {
+    text-decoration: underline;
 }
 
 .display-5 {
