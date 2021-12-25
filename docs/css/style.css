@@ -8,6 +8,11 @@ h1 {
     color: white;
 }
 
+a {
+    position:relative;
+    z-index:9999;
+}
+
 #particles-js {
     position: fixed;
     top: 0;
