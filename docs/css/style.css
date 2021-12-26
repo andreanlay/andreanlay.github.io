@@ -8,9 +8,9 @@ h1 {
     color: white;
 }
 
-a {
-    position:relative;
-    z-index:9999;
+a, img {
+    position: relative;
+    z-index: 9999;
 }
 
 #particles-js {
