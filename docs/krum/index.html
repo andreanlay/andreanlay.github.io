@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krum - Daily Facts & Knowledge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Lora:ital,wght@0,400;1,400&family=DM+Mono:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0a0a0b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Syne', sans-serif;
+    }
+
+    /* ── Banner ── */
+    .banner {
+      width: 100vw;
+      height: 100vh;
+      background: #0e0d0b;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+      padding: 0 80px;
+    }
+
+    /* Grid background */
+    .banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Warm top-left glow */
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: -200px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(180,120,20,0.18) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Left column ── */
+    .left {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 460px;
+    }
+
+    /* Eyebrow */
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .eyebrow-line {
+      width: 40px;
+      height: 1.5px;
+      background: #c8960a;
+      flex-shrink: 0;
+    }
+
+    .eyebrow-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      color: #c8960a;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    /* Logo row */
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    /* ── ASSET PLACEHOLDER: Replace src with your icon path ── */
+    .app-icon {
+      width: 90px;
+      height: 90px;
+      border-radius: 20px;
+      object-fit: cover;
+      flex-shrink: 0;
+      /* Placeholder style — remove when real asset is set */
+      background: #1a1a1c;
+      border: 1.5px dashed rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app-icon-placeholder {
+      width: 90px;
+      height: 90px;
+      border-radius: 20px;
+      flex-shrink: 0;
+      background: #1a1a1c;
+      border: 1.5px dashed rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app-icon-placeholder span {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      color: rgba(255,255,255,0.2);
+      text-align: center;
+      line-height: 1.4;
+      letter-spacing: 0.05em;
+    }
+
+    .wordmark {
+      font-family: 'Playfair Display', serif;
+      font-size: 86px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      display: flex;
+      align-items: baseline;
+    }
+
+    .wordmark-dot {
+      color: #F0C040;
+      font-size: 86px;
+    }
+
+    /* Subtitle */
+    .subtitle {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+      margin-bottom: 36px;
+      max-width: 380px;
+    }
+
+    /* Category dots */
+    .dots {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    .dot {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+    }
+
+    /* App Store button */
+    .appstore-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 18px 36px;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+      cursor: pointer;
+      max-width: 400px;
+    }
+
+    .appstore-btn:hover {
+      background: rgba(255,255,255,0.09);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .appstore-apple {
+      font-size: 36px;
+      color: #F0C040;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .appstore-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .appstore-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .appstore-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 22px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Right column — Phone ── */
+    .right {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 440px;
+      height: 100%;
+    }
+
+    .phone-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Phone frame */
+    .phone-frame {
+      width: 300px;
+      height: 620px;
+      border-radius: 44px;
+      border: 2px solid rgba(255,255,255,0.18);
+      box-shadow:
+        0 50px 100px rgba(0,0,0,0.7),
+        inset 0 0 0 1px rgba(255,255,255,0.05);
+      overflow: hidden;
+      position: relative;
+      background: #0e0d0b;
+    }
+
+    /* Dynamic island */
+    .phone-frame::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 110px;
+      height: 30px;
+      background: #000;
+      border-radius: 18px;
+      z-index: 10;
+    }
+
+    /* Home indicator */
+    .phone-frame::after {
+      content: '';
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 110px;
+      height: 4px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 2px;
+      z-index: 10;
+    }
+
+    /* ── ASSET PLACEHOLDER: Replace src with your screenshot path ── */
+    .phone-screenshot {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .phone-screenshot-placeholder {
+      width: 100%;
+      height: 100%;
+      background: #1a1916;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .phone-screenshot-placeholder span {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: rgba(255,255,255,0.2);
+      text-align: center;
+      line-height: 1.6;
+      letter-spacing: 0.05em;
+      max-width: 180px;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+
+    <!-- Left column -->
+    <div class="left">
+
+      <!-- Eyebrow -->
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Knowledge, Crumbled</span>
+      </div>
+
+      <!-- Logo row -->
+      <div class="logo-row">
+        <div class="app-icon-placeholder">
+            <img src="../assets/krum-icon.png" width="90" height="90" style="border-radius: 20px; object-fit: cover;" />
+        </div>
+
+        <div class="wordmark">
+          Krum
+        </div>
+      </div>
+
+      <!-- Subtitle -->
+      <p class="subtitle">
+        One surprising fact, every swipe. Bite-sized knowledge across 31 topics.
+      </p>
+
+      <!-- Category color dots -->
+      <div class="dots">
+        <div class="dot" style="background:#E0A040"></div>
+        <div class="dot" style="background:#4CAAF0"></div>
+        <div class="dot" style="background:#5DBF6A"></div>
+        <div class="dot" style="background:#9B72F0"></div>
+        <div class="dot" style="background:#CF72B0"></div>
+        <div class="dot" style="background:#E07040"></div>
+        <div class="dot" style="background:#E05252"></div>
+        <div class="dot" style="background:#3ECFB2"></div>
+        <div class="dot" style="background:#5090D0"></div>
+      </div>
+
+      <!-- App Store button -->
+      <a href="https://apps.apple.com/id/app/krum/id6761249270?l=id" target="_blank" rel="noopener">
+        <img style="width: 200px; height:75px" src="../assets/download-on-appstore.svg"/>
+      </a>
+
+    </div>
+
+    <!-- Right column — Phone -->
+    <div class="right">
+      <div class="phone-wrap">
+        <div class="phone-frame">
+          <div class="phone-screenshot-placeholder">
+            <img class="phone-screenshot" src="../assets/krum-knowledge-card.png"/>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
