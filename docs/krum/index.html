@@ -20,7 +20,7 @@
     /* ── Banner ── */
     .banner {
       width: 100vw;
-      height: 100vh;
+      min-height: 100vh;
       background: #0e0d0b;
       position: relative;
       overflow: hidden;
@@ -312,6 +312,102 @@
       line-height: 1.6;
       letter-spacing: 0.05em;
       max-width: 180px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .banner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 48px;
+        padding: 60px 32px 48px;
+        height: auto;
+      }
+
+      .left {
+        max-width: 100%;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+      }
+
+      .eyebrow {
+        justify-content: center;
+        margin-bottom: 28px;
+      }
+
+      .logo-row {
+        justify-content: center;
+        margin-bottom: 24px;
+      }
+
+      .wordmark {
+        font-size: 64px;
+      }
+
+      .wordmark-dot {
+        font-size: 64px;
+      }
+
+      .subtitle {
+        font-size: 17px;
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 28px;
+      }
+
+      .dots {
+        justify-content: center;
+        margin-bottom: 36px;
+      }
+
+      .right {
+        width: 100%;
+        height: auto;
+      }
+
+      .phone-frame {
+        width: 260px;
+        height: 536px;
+        border-radius: 38px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .banner {
+        padding: 48px 20px 40px;
+        gap: 40px;
+      }
+
+      .wordmark {
+        font-size: 52px;
+      }
+
+      .wordmark-dot {
+        font-size: 52px;
+      }
+
+      .app-icon-placeholder,
+      .app-icon {
+        width: 72px;
+        height: 72px;
+      }
+
+      .app-icon-placeholder img {
+        width: 72px;
+        height: 72px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .phone-frame {
+        width: 220px;
+        height: 454px;
+        border-radius: 32px;
+      }
     }
   </style>
 </head>
